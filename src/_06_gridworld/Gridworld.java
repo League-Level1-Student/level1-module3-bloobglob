@@ -16,12 +16,10 @@ public class Gridworld {
 		int x2 = rand.nextInt(10);
 		int y2 = rand.nextInt(10);
 		World world = new World();
-		world.show();
 		Bug bug = new Bug();
 		Bug bug2 = new Bug();
 		Location loc = new Location(x, y);
 		Location loc2 = new Location(x2, y2);
-		world.add(loc, bug);
 		bug2.setColor(Color.blue);
 		bug2.turn();
 		bug2.turn();
@@ -35,6 +33,8 @@ public class Gridworld {
 				}
 			}
 		}
-		
+		world.add(loc, bug);
+		world.add(loc2, bug2);
+		world.show();
 	}
 }
